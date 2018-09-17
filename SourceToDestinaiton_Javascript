@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Way To Reach Your Destination</title>
+    <style type="text/css">
+
+         #main_body{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-image:url("home_background.jpg");
+            
+        }
+
+     #system_title{
+            text-align:center;
+            color:gold;
+            font-size: 25px;
+            margin-top:10px;
+            padding:2px;
+            font-family: fantasy;
+            line-height: 1.4;
+            font-weight: normal;
+            font-stretch: normal;
+
+        }
+
+            #source_label{
+             color:white;
+             font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif'Proxima Nova','Helvetica','Corbel',sans-serif;
+             font-size:16px;
+             padding-top:3px;
+             margin-left: 8px;
+        }
+
+         #destination_label{
+             color:white;
+             font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif'Proxima Nova','Helvetica','Corbel',sans-serif;
+             font-size:16px;
+             padding-top:3px;
+             margin-left: 8px;
+        }
+        .textbox { 
+         background: #FFF url(images/search.png) no-repeat 4px 4px; 
+         border: 1px solid #999; 
+         outline:0; 
+         padding-left: 25px;
+         height:25px; 
+         width: 275px; 
+        } 
+
+
+        #findbtn {
+    -moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+    box-shadow:inset 0px 1px 0px 0px #54a3f7;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));
+    background:-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background:-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background:-o-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
+    background-color:#007dc1;
+    -moz-border-radius:25px;
+    -webkit-border-radius:25px;
+    border-radius:25px;
+    border:1px solid #124d77;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Trebuchet MS;
+    font-size:16px;
+    padding:9px 76px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #154682;
+    }
+     #findbtn:hover {
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));
+        background:-moz-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+        background:-webkit-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+        background:-o-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+        background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
+        background-color:#0061a7;
+    }
+     #findbtn:active {
+    position:relative;
+    top:1px;
+    }
+
+    #distance_div{
+         color: #FF8C00;
+         margin-left: 20px;
+         font-size:19px;
+         font-family:'Times New Roman', Times, serif;
+    }
+
+    #show_details{
+        background: #c1cdcd;
+        color: #FF4500;
+        font-family:'Times New Roman', Times, serif;
+    }
+
+
+    #copyright{
+        color:yellowgreen;
+        font-family:'Times New Roman', Times, serif;
+    }
+    #copyright_border{
+        color:goldenrod;
+    }
+    #under_title{
+        color:forestgreen;
+    }
+
+        .myButtongmail {
+    -moz-box-shadow:inset 0px 1px 0px 0px #c42a34;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #c42a34;
+    box-shadow:inset 0px 1px 0px 0px #c42a34;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5F6C0D), color-stop(1, #d13e3e));
+    background:-moz-linear-gradient(top, #5F6C0D 5%, #d13e3e 100%);
+    background:-webkit-linear-gradient(top, #5F6C0D 5%, #d13e3e 100%);
+    background:-o-linear-gradient(top, #5F6C0D 5%, #d13e3e 100%);
+    background:linear-gradient(to bottom, #5F6C0D 5%, #d13e3e 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5F6C0D', endColorstr='#d13e3e',GradientType=0);
+    background-color:#5F6C0D;
+    -moz-border-radius:25px;
+    -webkit-border-radius:25px;
+    border-radius:25px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Trebuchet MS;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 76px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #b82525;
+    }
+    .myButtongmail:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d13e3e), color-stop(1, #d95b5b));
+    background:-moz-linear-gradient(top, #d13e3e 5%, #d95b5b 100%);
+    background:-webkit-linear-gradient(top, #d13e3e 5%, #d95b5b 100%);
+    background:-o-linear-gradient(top, #d13e3e 5%, #d95b5b 100%);
+    background:linear-gradient(to bottom, #d13e3e 5%, #d95b5b 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d13e3e', endColorstr='#d95b5b',GradientType=0);
+    background-color:#d13e3e;
+ }
+     .myButtongmail:active {
+        position:relative;
+        top:1px;
+    }
+
+    </style>
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+
+ <script type="text/javascript">
+
+        //Some variable declaration
+
+        var source, destination;
+        var directionsDisplay;
+
+        //Create an object of google map directionservice
+        var directionsService = new google.maps.DirectionsService();
+
+        google.maps.event.addDomListener(window, 'load', function () {
+            new google.maps.places.SearchBox(document.getElementById('source_text'));
+            new google.maps.places.SearchBox(document.getElementById('destination_text'));
+            directionsDisplay = new google.maps.DirectionsRenderer({ 'draggable': false });
+            directionsDisplay = new google.maps.DirectionsRenderer({ polylineOptions: { strokeColor: "#C10816",strokeWeight: 6 } });
+        });
+
+        function findRouteAndDistance() {
+            var mapOptions = {
+                zoom: 6,
+
+            };
+
+
+            //directionsDisplay = new google.maps.DirectionsRenderer({ polylineOptions: { strokeColor: "#8b0013" } });
+
+            map = new google.maps.Map(document.getElementById('map_div'), mapOptions);
+            directionsDisplay.setMap(map);
+            directionsDisplay.setPanel(document.getElementById('show_details'));
+            document.getElementById("show_details").style.color = "lightblue";
+
+
+
+            //DIRECTIONS AND ROUTE
+            source = document.getElementById("source_text").value;
+            destination = document.getElementById("destination_text").value;
+
+            var request = {
+                origin: source,
+                destination: destination,
+                travelMode: google.maps.TravelMode.DRIVING
+            };
+            
+            directionsService.route(request, function (response, status) {
+                if (status == google.maps.DirectionsStatus.OK) {
+                    directionsDisplay.setDirections(response);
+                    document.getElementById("show_details").style.color = "lightblue";
+                }
+                else{
+                    alert("Invalid Source or Destination entered.\nPlease input a valid Source or Destination");
+                    
+                }
+            });
+
+
+
+            //DISTANCE AND DURATION
+            var service = new google.maps.DistanceMatrixService();
+            service.getDistanceMatrix({
+                origins: [source],
+                destinations: [destination],
+                travelMode: google.maps.TravelMode.DRIVING,
+                unitSystem: google.maps.UnitSystem.METRIC,
+                avoidHighways: false,
+                avoidTolls: false
+
+            }, 
+
+            function (response, status) {
+                if (status == google.maps.DistanceMatrixStatus.OK && response.rows[0].elements[0].status != "ZERO_RESULTS") {
+                    var distance = response.rows[0].elements[0].distance.text;
+                    var duration = response.rows[0].elements[0].duration.text;
+                    var distance_div = document.getElementById("distance_div");
+                    distance_div.innerHTML = "";
+                    distance_div.innerHTML += "Result = Total distance is : " + distance + "&nbsp;and ";
+                    distance_div.innerHTML += "total duration is : " + duration + "&nbsp;";
+                    distance_div.innerHTML +="to reach your desirable destionation."
+
+                } else {
+                    alert("Unable to find out the distance.\n Please try again...");
+                }
+            });
+        }
+    </script>
+ 
+</head>
+<body>
+<div>
+    <div id="main_body">
+        
+       <div id="title_heading">
+            <h2 id="system_title"><b>INTELLIGENT TOURIST</b> GUIDE SYSTEM <abbr title="Intelligent Tourist Guide System">(ITGS)</abbr></h2>
+            <hr id="under_title"/>
+        </div>
+
+        <table border="0" cellpadding="2" cellspacing="3" align="center">
+        <tr>
+            <td colspan="2">
+                <label id="source_label">SOURCE </label> 
+                <input class="textbox" type="text" id="source_text" placeholder="Enter your source place" style="width: 300px" />
+                &nbsp; 
+                <label id="destination_label">DESTINATION </label> 
+
+                <input class="textbox" type="text" id="destination_text" placeholder="Enter your destination place" style="width: 300px" />
+
+                &nbsp;&nbsp;&nbsp;
+
+                <input id="findbtn" type="button" value="Find The Route" onclick="findRouteAndDistance()" />
+                 <a class="myButtongmail" href="intelligent tourist guide system.html">Back</a>
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="0">
+                <div id="distance_div" style="text-align:center">
+                <br/>
+                <br/>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="map_div" style="width: 550px; height: 430px">
+                </div>
+            </td>
+            <td>
+                <div id="show_details" style="width: 500px; height: 430px; overflow : scroll ">
+                </div>
+            </td>
+        </tr>
+    </table>
+    <br />
+
+        <br/>
+        
+        <div id="copyright" align="center">
+            <br/>
+            <br />
+            <hr id="copyright_border"/>
+            2016-2017 &copy; Intelligent Tourist Guide System | Artificial Intelligence | Computer Science & Engineering
+        </div>
+        
+   
+   </div> 
+
+   </div>
+</body>
+</html>
+
